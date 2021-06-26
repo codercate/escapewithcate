@@ -1,0 +1,55 @@
+/* Navigation */
+
+nav {
+    height: 72px;
+    background: rgba(255, 255, 255, .9);
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 100;
+	float: left;
+}
+.navbar {
+    position:fixed;
+}
+
+nav a{
+    padding: 0 32px;
+    color: #202125;
+    transition: 0.4s;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: #6ddfdf;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+	padding: 0;
+} 
+
+.active {
+    color: #ff97c5;
+}
+
+#logoItem {
+	padding: 36px 70px 36px 70px;
+	list-style: none;
+	background-image: url("img/ewclogo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px;
+}
