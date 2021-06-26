@@ -1,23 +1,18 @@
+
+
 /* Navigation */
 
 nav {
-    height: 72px;
+    height: 8%;
     background: rgba(255, 255, 255, .9);
     width: 100%;
     margin: 0;
-    position: fixed;
+    position: absolute;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    display: flex;
     justify-content: space-between;
     padding: 0;
-    box-sizing: border-box;
-    z-index: 100;
-	float: left;
-}
-.navbar {
-    position:fixed;
 }
 
 nav a{
@@ -38,7 +33,6 @@ nav ul{
     align-items: center;
     height: 100%;
     margin: auto;
-	padding: 0;
 } 
 
 .active {
@@ -46,10 +40,111 @@ nav ul{
 }
 
 #logoItem {
-	padding: 36px 70px 36px 70px;
+	padding: 30px 70px 30px 70px;
 	list-style: none;
 	background-image: url("img/ewclogo.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100px;
+	background-size: 75px;
+}
+
+header {
+    background-image: url('img/escapewcate.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 0 0 60%;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.about {
+    background-image: url('img/PeachBackground.png');
+    background-repeat: repeat-x;
+    background-size: auto 50%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.about_title_box {
+    position: absolute;
+    width: 100%;
+    margin-top:5%;
+    padding: 0;
+    z-index: 3;
+    display: grid;
+}
+.about_title {
+    color: #f888c7;
+    font-family: 'Beautiful Bloom', sans-serif;
+    font-size: 70pt;
+    grid-area: 1 / 1;
+    margin-top: 30px;
+    margin-left: -30px;
+}
+.about_wave_mobile {
+    margin-left: 20px;
+    grid-area: 1 / 1;
+}
+
+.aboutPhotos {
+    margin-top: 130px;
+}
+.about_background_mobile {
+    display: inline-block;
+    position: relative;
+}
+.about_me_mobile {
+    margin-top: -90%;
+    position: relative;
+    margin-left: 20px;
+}
+.aboutText {
+    margin-top: 10%;
+}
+.about_me_text {
+    position: relative;
+    font-size: 15pt;
+}
+
+.about_sakura_mobile {
+    position: relative;
+}
+
+.sakura {
+
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 900px){
+    .navbar {
+        padding: 0;
+    }
+    nav ul {
+	    padding-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 720px){
+    nav {
+        height: 9.5%;
+        float: left;
+    }
+    #logoItem {
+        padding: 36px 70px 36px 70px;
+        background-size: 90px;
+    }
+    header {
+        padding: 0 0 52%;
+    }
+    .navbar {
+        position: fixed;
+    }
 }
