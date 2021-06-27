@@ -1,5 +1,3 @@
-
-
 /* Navigation */
 
 nav {
@@ -65,12 +63,10 @@ header {
 }
 
 .about {
-    background-image: url('img/PeachBackground.png');
-    background-repeat: repeat-x;
-    background-size: auto 50%;
     position: relative;
     width: 100%;
     text-align: center;
+    z-index: -3;
 }
 .about_title_box {
     position: absolute;
@@ -122,8 +118,204 @@ header {
     margin-top: 30px;
 }
 
+.follow_along {
+
+}
+
+.headings {
+    font-family: 'Beautiful Bloom', sans-serif;
+    margin: 0;
+    font-size: 70pt;
+}
+
+#follow {
+    color: #6ddfdf;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#insta {
+    font-family: 'Quicksand';
+    font-size: 20px;
+    color: #f888c7;
+    text-align: center;
+    opacity: 0.7;
+    margin-top: -12%;
+}
+
+.instaGrid {
+    padding: 0;
+}
+
+.grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-between;
+}
+
+.cell {
+    width: 32%;
+    padding-bottom: 32%; /* Same as width, sets height */
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    position: relative;
+    background-color: #999;
+}
+
+#swing.cell  {
+    background-image: url('img/swing.jpg');
+    background-size: cover;
+}
+#bali.cell {
+    background-image: url('img/bali.jpg');
+    background-size: cover;
+}
+#surf.cell {
+    background-image: url('img/surf.jpg');
+    background-size: cover;
+}
+#hotspring.cell {
+    background-image: url('img/hotspring.jpg');
+    background-size: cover;
+}
+#hydrangea.cell {
+    background-image: url('img/hydrangea.jpg');
+    background-size: cover;
+}
+#ocean.cell {
+    background-image: url('img/ocean.jpg');
+    background-size: cover;
+}
+#hb.cell {
+    background-image: url('img/hb.jpg');
+    background-size: cover;
+}
+#waterfall.cell {
+    background-image: url('img/waterfall.jpg');
+    background-size: cover;
+}
+#flowers.cell {
+    background-image: url('img/flowers.jpg');
+    background-size: cover;
+}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar {
+    display: none;
+}
+  
+.card {
+    flex: 0 0 auto;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #6ddfdf;
+    margin-top: 80px;
+    transition: all 0.2s ease-in-out !important;
+    margin-right: 30px;
+}
+
+.cardText {
+    color: #f888c7;
+    font-family: 'Beautiful Bloom', sans-serif;
+    font-size: 70pt;
+    position: relative;
+    z-index: 2;
+    margin-top: -20%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #f8f2fd;
+    padding-top: 10%;
+    display: flex;
+}
+
+footer #left-footer{
+    flex: 1;
+    border-right: 1px solid #6ddfdf;
+}
+
+footer #left-footer ul{
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+}
+
+footer #right-footer{
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+}
+
+footer #social-media-footer a .fa-instagram,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github{
+    transition: 0.4s;
+}
+
+footer #social-media-footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+footer #social-media-footer ul li{
+    font-size: 48px;
+    padding: 16px;
+    transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a .fa-instagram{
+    color: pink;
+}
+
+footer #social-media-footer ul li:hover a .fa-youtube{
+    color: red;
+}
+
+footer #social-media-footer ul li:hover a .fa-github{
+    color: #bbb;
+}
+
+footer{
+    flex-direction: column;
+    text-align: center;
+}
+footer #left-footer {
+    flex:1;
+    border-right: 0;
+    border-left: 0;
+}
+footer #right-footer {
+    color: black;
+}
+footer #right-footer a{
+    color: black;
+}
+footer #social-media-footer a .fa-instagram,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github{
+    color: black;
+    transition: 0.4s;
+}
+
 
 @media only screen and (max-width: 900px){
+    body {
+        background-image: url('img/backgroundMobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 52% 45%;
+        left: 0;
+    }
+
     .navbar {
         padding: 0;
     }
@@ -146,5 +338,22 @@ header {
     }
     .navbar {
         position: fixed;
+    }
+    .about {
+        background-image: url('img/PeachBackground.png');
+        background-repeat: repeat-x;
+        background-size: auto 50%;
+    }
+    .follow_along {
+        height: 1400px;
+        background-image: url('img/greenDot.png');
+        background-repeat: no-repeat;
+        background-position: 0% 45%;
+        left: 0;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: none;
     }
 }
