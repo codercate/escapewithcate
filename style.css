@@ -101,16 +101,29 @@ header {
     position: relative;
     margin-left: 20px;
 }
-.aboutText {
-    margin-top: 10%;
-}
 .about_me_text {
+    margin-top: 10%;
     position: relative;
     font-size: 15pt;
 }
 
 .about_sakura_mobile {
     position: relative;
+}
+
+.about_wave {
+    margin-left: 270px;
+    grid-area: 1 / 1;
+    margin-top: 90px;
+}
+.about_background {
+    display: inline-block;
+    position: relative;
+}
+.about_me {
+    margin-top: -370px;
+    position: relative;
+    margin-left: 12%;
 }
 
 .sakura {
@@ -343,6 +356,11 @@ footer #social-media-footer a .fa-github{
         background-image: url('img/PeachBackground.png');
         background-repeat: repeat-x;
         background-size: auto 50%;
+    }
+    .about_title {
+        font-size: 120pt;
+        margin-left: 120px;
+        margin-top: 70px;
     }
     .follow_along {
         height: 1400px;
