@@ -11,6 +11,7 @@ nav {
     font-weight: bold;
     justify-content: space-between;
     padding: 0;
+    z-index: 5;
 }
 
 nav a{
@@ -111,6 +112,11 @@ header {
     position: relative;
 }
 
+.about_sakura {
+    position: relative;
+    margin-top: 400px;
+}
+
 .about_wave {
     margin-left: 270px;
     grid-area: 1 / 1;
@@ -121,18 +127,13 @@ header {
     position: relative;
 }
 .about_me {
-    margin-top: -370px;
+    margin-top: -390px;
     position: relative;
     margin-left: 12%;
 }
 
 .sakura {
-
     margin-top: 30px;
-}
-
-.follow_along {
-
 }
 
 .headings {
@@ -142,6 +143,23 @@ header {
 }
 
 #follow {
+    font-size: 200px;
+    color: #6ddfdf;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -150px;
+}
+#along {
+    font-size: 200px;
+    color: #6ddfdf;
+    text-align: right;
+    left: 315px;
+    top: 140px;
+    margin-right: 110px;
+    margin-top: auto;
+}
+
+#followalong {
     color: #6ddfdf;
     text-align: center;
     margin-top: 50px;
@@ -149,11 +167,10 @@ header {
 
 #insta {
     font-family: 'Quicksand';
-    font-size: 20px;
+    font-size: 23px;
     color: #f888c7;
     text-align: center;
     opacity: 0.7;
-    margin-top: -12%;
 }
 
 .instaGrid {
@@ -211,40 +228,24 @@ header {
     background-size: cover;
 }
 
-.scrolling-wrapper-flexbox {
-    display: flex;
-    overflow-x: auto;
-    align-items: center;
-    -webkit-overflow-scrolling: touch;
-}
-
-.scrolling-wrapper-flexbox::-webkit-scrollbar {
-    display: none;
-}
-  
-.card {
-    flex: 0 0 auto;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: #6ddfdf;
-    margin-top: 80px;
-    transition: all 0.2s ease-in-out !important;
-    margin-right: 30px;
+#mobileDeck {
+    margin-top: 40px;
 }
 
 .cardText {
     color: #f888c7;
     font-family: 'Beautiful Bloom', sans-serif;
-    font-size: 70pt;
+    font-size: 60pt;
     position: relative;
     z-index: 2;
-    margin-top: -20%;
+    margin-top: -110%;
     text-align: center;
 }
 
 /* Footer */
 footer {
     background: #f8f2fd;
+    margin-top: 300px;
     padding-top: 10%;
     display: flex;
 }
@@ -319,6 +320,11 @@ footer #social-media-footer a .fa-github{
     transition: 0.4s;
 }
 
+@media only screen and (max-width: 320px){
+    #followalong {
+        font-size: 80px;
+    }
+}
 
 @media only screen and (max-width: 900px){
     body {
@@ -334,6 +340,33 @@ footer #social-media-footer a .fa-github{
     }
     nav ul {
 	    padding-bottom: 10px;
+    }
+    #insta {
+        margin-top: -9%;
+    }
+    .scrolling-wrapper-flexbox {
+        display: flex;
+        overflow-x: auto;
+        align-items: center;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .scrolling-wrapper-flexbox::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: #6ddfdf;
+        margin-top: 80px;
+        transition: all 0.2s ease-in-out !important;
+        margin-right: 30px;
+    }
+
+    #desktopDeck {
+        display: none;
     }
 }
 
@@ -362,6 +395,9 @@ footer #social-media-footer a .fa-github{
         margin-left: 120px;
         margin-top: 70px;
     }
+    .about_me_text {
+        margin-top: 400px;
+    }
     .follow_along {
         height: 1400px;
         background-image: url('img/greenDot.png');
@@ -370,8 +406,39 @@ footer #social-media-footer a .fa-github{
         left: 0;
     }
 
+    #insta {
+        font-size: 50px;
+        margin-right: 50px;
+    }
+    .scrolling-wrapper{
+        overflow-x: auto;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+        width: 100%;
+    }
+    
+    .scrolling-wrapper::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+
+    .card {
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: #6ddfdf;
+        margin-top: 80px;
+        margin-left: 30px;
+        margin-right: 30px;
+        transition: all 0.2s ease-in-out !important;
+    }
+
     .card:hover {
         transform: translateY(-5px);
         box-shadow: none;
     }
+
+    .cardText {
+        margin-top: -500px;
+        font-size: 120pt;
+    }
+ 
 }
