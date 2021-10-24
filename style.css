@@ -1,3 +1,12 @@
+/*
+Theme Name: Escape With Cate
+Author: Cate Bissell
+Author URI: www.catebissell.com
+Description: A cute, travel blog theme
+Version: 1.0
+*/
+
+
 /* Navigation */
 
 nav {
@@ -18,6 +27,7 @@ nav a{
     padding: 0 32px;
     color: #202125;
     transition: 0.4s;
+    text-decoration: none;
 }
 
 nav a:hover{
@@ -36,6 +46,7 @@ nav ul{
 
 .active {
     color: #ff97c5;
+    text-decoration: none;
 }
 
 #logoItem {
@@ -72,7 +83,7 @@ header {
 .about_title_box {
     position: absolute;
     width: 100%;
-    margin-top:5%;
+    margin-top:3%;
     padding: 0;
     z-index: 3;
     display: grid;
@@ -232,20 +243,24 @@ header {
     margin-top: 40px;
 }
 
+.card-img-top {
+    max-height: 300px;
+}
+
 .cardText {
     color: #f888c7;
     font-family: 'Beautiful Bloom', sans-serif;
     font-size: 60pt;
     position: relative;
     z-index: 2;
-    margin-top: -110%;
     text-align: center;
+    margin-top: -60px;
 }
+
 
 /* Footer */
 footer {
     background: #f8f2fd;
-    margin-top: 300px;
     padding-top: 10%;
     display: flex;
 }
@@ -298,26 +313,15 @@ footer #social-media-footer ul li:hover a .fa-github{
     color: #bbb;
 }
 
-footer{
-    flex-direction: column;
-    text-align: center;
+
+/* BLOG PAGE */
+.ewc-blogs {
+    padding: 65px 0 70px;
 }
-footer #left-footer {
-    flex:1;
-    border-right: 0;
-    border-left: 0;
-}
-footer #right-footer {
-    color: black;
-}
-footer #right-footer a{
-    color: black;
-}
-footer #social-media-footer a .fa-instagram,
-footer #social-media-footer a .fa-youtube,
-footer #social-media-footer a .fa-github{
-    color: black;
-    transition: 0.4s;
+.blog-thumbnail{
+    position: center;
+    max-height: 230px;
+    max-width: 330px;
 }
 
 @media only screen and (max-width: 320px){
@@ -360,13 +364,42 @@ footer #social-media-footer a .fa-github{
         border: 2px solid;
         border-radius: 10px;
         border-color: #6ddfdf;
-        margin-top: 80px;
+        margin-top: 30px;
         transition: all 0.2s ease-in-out !important;
         margin-right: 30px;
+        max-width: 300px;
+    }
+
+    .card-img-top {
+        max-height: 200px;
     }
 
     #desktopDeck {
         display: none;
+    }
+
+    footer {
+        margin-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer #left-footer {
+        flex:1;
+        border-right: 0;
+        border-left: 0;
+    }
+    footer #right-footer {
+        background: rgb(109,223,223, .65);
+        color: black;
+    }
+    footer #right-footer a{
+        color: black;
+    }
+    footer #social-media-footer a .fa-instagram,
+    footer #social-media-footer a .fa-youtube,
+    footer #social-media-footer a .fa-github{
+        color: black;
+        transition: 0.4s;
     }
 }
 
@@ -399,7 +432,8 @@ footer #social-media-footer a .fa-github{
         margin-top: 400px;
     }
     .follow_along {
-        height: 1400px;
+        height: 1650px;
+        margin-top: 100px;
         background-image: url('img/greenDot.png');
         background-repeat: no-repeat;
         background-position: 0% 45%;
@@ -425,7 +459,7 @@ footer #social-media-footer a .fa-github{
         border: 2px solid;
         border-radius: 10px;
         border-color: #6ddfdf;
-        margin-top: 80px;
+        margin-top: 100px;
         margin-left: 30px;
         margin-right: 30px;
         transition: all 0.2s ease-in-out !important;
