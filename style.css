@@ -330,6 +330,7 @@ footer #social-media-footer ul li:hover a .fa-github{
     }
 }
 
+/*MOBILE*/
 @media only screen and (max-width: 900px){
     body {
         background-image: url('img/backgroundMobile.png');
@@ -401,8 +402,23 @@ footer #social-media-footer ul li:hover a .fa-github{
         color: black;
         transition: 0.4s;
     }
+    .blog_title {
+        top: 30%;
+        margin-left: 20%;
+        font-size: 50pt;
+        height: 40px;
+    }
+    .blogPhoto{
+        display: none;
+    }
+
+    .subscribe_button {
+        margin-top: 90%;
+        margin-left: -70%;
+    }
 }
 
+/*DESKTOP*/
 @media only screen and (min-width: 720px){
     nav {
         height: 9.5%;
@@ -474,5 +490,92 @@ footer #social-media-footer ul li:hover a .fa-github{
         margin-top: -500px;
         font-size: 120pt;
     }
+
+    .blog_title {
+        top: 45%;
+        margin-left: 8%;
+        height: 100px;
+        font-size: 120pt;
+    }
+
+    .subscribe_button {
+        margin-top: 85%;
+        margin-left: -65%;
+    }
  
+}
+
+/* Blog */
+.blog {
+    height: 766px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: -5%;
+}
+
+.blog_title {
+    position: absolute;
+    z-index: 3;
+    order: 3;
+    display: inline-block;
+    color: #f888c7;
+    font-family: 'Beautiful Bloom', sans-serif;
+}
+
+.palm_trees {
+    margin-top: 15%;
+    display: inline-block;
+    position: relative;
+}
+
+.btn-primary {
+    background: #6ddfdf;
+    color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 3px 0 0 #439c9c;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #439c9c;
+    box-shadow: 0 3px 0 0 #439c9c;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #6ddfdf;
+    box-shadow: none;
+}
+
+.subscribe_button {
+    width: 150px;
+    position: absolute;
+    z-index: 3;
+    order: 3;
+    display: inline-block;
+}
+
+.blogPhoto {
+    width: 95%;
+    background-color: #999;
+    height: 80%;
+}
+.blogPhoto#bali_volcano {
+    margin-top: 50%;
+    background-image: url('img/BaliVolcano.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+.blogPhoto#hb_surf {
+    margin-top: 70%;
+    background-image: url('img/HBSurf.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.shell {
+    height: 10%;
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: -20%;
 }
