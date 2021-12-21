@@ -273,13 +273,17 @@ header {
 /* Footer */
 footer {
     background: #f8f2fd;
-    padding-top: 10%;
     display: flex;
 }
 
 footer #left-footer{
     flex: 1;
     border-right: 1px solid #6ddfdf;
+}
+
+footer #left-footer a{
+    color: black;
+    text-decoration: none;
 }
 
 footer #left-footer ul{
@@ -292,6 +296,11 @@ footer #right-footer{
     flex: 2;
     padding: 8px;
     text-align: center;
+}
+
+footer #right-footer a{
+    color: black;
+    text-decoration: none;
 }
 
 footer #social-media-footer a .fa-instagram,
@@ -344,12 +353,16 @@ footer #social-media-footer ul li:hover a .fa-github{
 
 /*MOBILE*/
 @media only screen and (max-width: 900px){
+    html, body {
+        overflow-x: hidden;
+    }
     body {
         background-image: url('img/backgroundMobile.png');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 52% 45%;
+        background-position: 52% 90%;
         left: 0;
+        position: relative;
     }
 
     .navbar {
@@ -384,7 +397,8 @@ footer #social-media-footer ul li:hover a .fa-github{
     }
 
     .card-img-top {
-        max-height: 200px;
+        object-fit: cover;
+        overflow:hidden;
     }
 
     #desktopDeck {
@@ -392,7 +406,7 @@ footer #social-media-footer ul li:hover a .fa-github{
     }
 
     footer {
-        margin-top: 30px;
+        padding-top: 10%;
         flex-direction: column;
         text-align: center;
     }
@@ -400,20 +414,15 @@ footer #social-media-footer ul li:hover a .fa-github{
         flex:1;
         border-right: 0;
         border-left: 0;
+        padding-bottom: 5%;
     }
     footer #right-footer {
+        padding-top: 10%;
+        padding-bottom: 5%;
         background: rgb(109,223,223, .65);
         color: black;
     }
-    footer #right-footer a{
-        color: black;
-    }
-    footer #social-media-footer a .fa-instagram,
-    footer #social-media-footer a .fa-youtube,
-    footer #social-media-footer a .fa-github{
-        color: black;
-        transition: 0.4s;
-    }
+    
 	.blog {
         margin-bottom: 25%;
     }
@@ -528,6 +537,23 @@ footer #social-media-footer ul li:hover a .fa-github{
     .subscribe_button {
         margin-top: 85%;
         margin-left: -56%;
+    }
+
+    footer {
+        padding-top: 3%;
+        padding-bottom: 2%;
+    }
+
+    footer #left-footer {
+        text-align: center;
+    }
+    footer #right-footer {
+        text-align: center;
+    }
+
+    footer #lf-contents {
+        padding-left: 20%;
+        text-align: left;
     }
 }
 
